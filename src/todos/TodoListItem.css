@@ -1,0 +1,38 @@
+.todo-item-container {
+    display: grid;
+    grid-template-columns: 90% 10%;
+    width: 60vw;
+    background-color: wheat;
+    border-radius: 5px;
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.button-container button {
+    width: 80%;
+    height: 80%;
+    border-style: none;
+    border-radius: 5px;
+}
+
+@keyframes buttonScaleUp {
+    0% {
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+.button-container .complete-todo-button:hover {
+    animation: buttonScaleUp 0.2s ease-in both;
+    background-color: lime;
+}
+.button-container .remove-todo-button:hover {
+    animation: buttonScaleUp 0.2s ease-in both;
+    background-color: red;
+}

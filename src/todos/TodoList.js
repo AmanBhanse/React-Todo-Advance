@@ -4,7 +4,7 @@ import "./TodoList.css";
 import { connect } from "react-redux";
 import { removeTodo } from "./actions";
 
-function TodoList({ todos = [{ text: "Hello" }, { text: "Gym" }], onRemovedPressed }) {
+function TodoList({ todos = [], onRemovedPressed }) {
     return (
         <div className="list-wrapper">
             {todos.map((todo) => (

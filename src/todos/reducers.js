@@ -10,7 +10,7 @@ export const todos = (state = [], action) => {
                 text,
                 isCompleted: false,
             };
-            return state.concet(newTodo);
+            return state.concat(newTodo);
         }
 
         case REMOVE_TODO: {

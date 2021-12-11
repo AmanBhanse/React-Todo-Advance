@@ -37,8 +37,8 @@ const mapStateToProps = (state) => {
     return { todos: state.todos };
 };
 
-const dispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
     return { onCreatePressed: (text) => dispatch(createTodo(text)) };
 };
 
-export default connect(mapStateToProps, dispatchToProps)(NewTodoForm);
+export default connect(mapStateToProps, mapDispatchToProps)(NewTodoForm);

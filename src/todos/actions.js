@@ -15,3 +15,21 @@ export const MARK_TODO_COMPLETE = "MARK_TODO_COMPLETE";
 export const markTodoComplete = (text) => {
     return { type: MARK_TODO_COMPLETE, payload: { text } };
 };
+
+export const LOAD_TODOS_IN_PROGRESS = "LOAD_TODOS_IN_PROGRESS";
+
+export const loadTodosInProgress = () => {
+    return { type: LOAD_TODOS_IN_PROGRESS };
+};
+
+export const LOAD_TOODS_SUCCESS = "LOAD_TOODS_SUCCESS";
+
+export const loadTodosSuccess = (todos) => {
+    return { type: LOAD_TOODS_SUCCESS, payload: { todos } };
+};
+
+export const LOAD_TODOS_FAILURE = "LOAD_TODOS_FAILURE";
+
+export const loadTodosFailure = () => {
+    return { type: LOAD_TODOS_FAILURE };
+};

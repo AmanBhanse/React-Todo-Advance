@@ -12,3 +12,7 @@ tab->At left section -> storage -> local Storage ->underneath local storage->loc
 command : npm install redux-thunk redux-devtools-extension @babel/runtime
 
 npm install --save-dev @babel/plugin-transform-runtime
+
+### Firebase
+
+command : npm i firebase

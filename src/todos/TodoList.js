@@ -3,10 +3,11 @@ import TodoListItem from "./TodoListItem";
 import "./TodoList.css";
 import { connect } from "react-redux";
 import { removeTodo, markTodoComplete } from "./actions";
-
-function TodoList({ todos = [], onRemovedPressed, onMarkCompletedPressed }) {
+import { displayAlter } from "./thunks";
+function TodoList({ todos = [], onRemovedPressed, onMarkCompletedPressed, onDisplayAlterClicked }) {
     return (
         <div className="list-wrapper">
+            <button onClick={onDisplayAlterClicked}>Dispatch thunk</button>
             {todos.map((todo) => (
                 <TodoListItem
                     todo={todo}
@@ -26,6 +27,7 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
     onRemovedPressed: (text) => dispatch(removeTodo(text)),
     onMarkCompletedPressed: (text) => dispatch(markTodoComplete(text)),
+    onDisplayAlterClicked: () => dispatch(displayAlter()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TodoList);

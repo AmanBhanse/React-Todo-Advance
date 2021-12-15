@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./NewTodoForm.css";
 import { connect } from "react-redux";
-import { createTodo } from "./actions";
 import { addTodoRequest } from "./thunks";
 
 function NewTodoForm({ todos, onCreatePressed }) {

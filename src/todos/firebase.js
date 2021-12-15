@@ -1,11 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { collection, getDocs, getFirestore, addDoc } from "firebase/firestore";
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
     apiKey: "AIzaSyBybFzLo2YENGKK1vDk9YnXsqKmGht3Lg4",
     authDomain: "todo-app-backend-aae15.firebaseapp.com",
@@ -16,6 +11,8 @@ const firebaseConfig = {
     measurementId: "G-6KZRXQLGS2",
 };
 
+const FIREBASE_TODO_COLLECTION_NAME = "reduxTodoProjDB";
+
 //initialize app
 initializeApp(firebaseConfig);
 
@@ -23,7 +20,7 @@ initializeApp(firebaseConfig);
 const db = getFirestore();
 
 //get collection
-export const todosColRef = collection(db, "reduxTodoProjDB");
+export const todosColRef = collection(db, FIREBASE_TODO_COLLECTION_NAME);
 
 //get data
 
@@ -39,13 +36,14 @@ export const addTodoToDB = async (todoText) => {
     const isCompleted = false;
     const text = todoText;
 
-    const addTodoToDBPromise = await addDoc(todosColRef, {
+    //Save Data to server
+    const createdTodoDocRef = await addDoc(todosColRef, {
         isCompleted,
         text,
     });
 
     const todo = {
-        id: addTodoToDBPromise.id,
+        id: createdTodoDocRef.id,
         text,
         isCompleted,
     };

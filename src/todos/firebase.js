@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { collection, getDocs, getFirestore } from "firebase/firestore";
+import { collection, getDocs, getFirestore, addDoc } from "firebase/firestore";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -32,4 +32,23 @@ export const getTodosFromDB = async () => {
     return snapshot.docs.map((doc) => {
         return { ...doc.data(), id: doc.id };
     });
+};
+
+export const addTodoToDB = async (todoText) => {
+    //Initialization
+    const isCompleted = false;
+    const text = todoText;
+
+    const addTodoToDBPromise = await addDoc(todosColRef, {
+        isCompleted,
+        text,
+    });
+
+    const todo = {
+        id: addTodoToDBPromise.id,
+        text,
+        isCompleted,
+    };
+
+    return todo;
 };

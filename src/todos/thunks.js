@@ -1,5 +1,5 @@
-import { loadTodosInProgress, loadTodosSuccess, loadTodosFailure } from "./actions";
-import { getTodosFromDB } from "./firebase";
+import { loadTodosInProgress, loadTodosSuccess, loadTodosFailure, createTodo } from "./actions";
+import { getTodosFromDB, addTodoToDB } from "./firebase";
 
 //Thunk is function is function which returns functions which contains actual logic we want to perform when triggered
 
@@ -17,5 +17,14 @@ export const loadTodos = () => async (dispatch, getState) => {
     } catch (e) {
         dispatch(loadTodosFailure());
         displayAlter(e);
+    }
+};
+
+export const addTodoRequest = (text) => async (dispatch, getState) => {
+    try {
+        const todo = await addTodoToDB(text);
+        dispatch(createTodo(todo));
+    } catch (e) {
+        alert(e);
     }
 };

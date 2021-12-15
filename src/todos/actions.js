@@ -1,7 +1,7 @@
 export const CREATE_TODO = "CREATE_TODO";
 
-export const createTodo = (text) => {
-    return { type: CREATE_TODO, payload: { text } };
+export const createTodo = (todo) => {
+    return { type: CREATE_TODO, payload: { todo } };
 };
 
 export const REMOVE_TODO = "REMOVE_TODO";

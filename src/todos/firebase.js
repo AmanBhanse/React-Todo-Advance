@@ -17,7 +17,7 @@ const firebaseConfig = {
 };
 
 //initialize app
-const firebaseApp = initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
 
 //init service
 const db = getFirestore();
@@ -27,12 +27,9 @@ export const todosColRef = collection(db, "reduxTodoProjDB");
 
 //get data
 
-export const getTodosFromDB = () => {
-    let todos = [];
-    getDocs(todosColRef).then((snapshot) => {
-        snapshot.docs.forEach((doc) => {
-            todos.push({ ...doc.data() });
-        });
+export const getTodosFromDB = async () => {
+    const snapshot = await getDocs(todosColRef);
+    return snapshot.docs.map((doc) => {
+        return { ...doc.data(), id: doc.id };
     });
-    return todos;
 };

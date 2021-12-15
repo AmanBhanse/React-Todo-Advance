@@ -1,5 +1,5 @@
 import { loadTodosInProgress, loadTodosSuccess, loadTodosFailure } from "./actions";
-import { todosColRef, getTodosFromDB } from "./firebase";
+import { getTodosFromDB } from "./firebase";
 
 //Thunk is function is function which returns functions which contains actual logic we want to perform when triggered
 

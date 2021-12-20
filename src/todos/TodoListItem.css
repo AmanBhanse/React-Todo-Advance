@@ -2,8 +2,26 @@
     display: grid;
     grid-template-columns: 90% 10%;
     width: 60vw;
-    background-color: wheat;
     border-radius: 5px;
+}
+
+.pending-todo {
+    background-color: wheat;
+}
+
+@keyframes transitionPendingTodoToCompletedTodo {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 70%;
+    }
+}
+
+.completed-todo {
+    background-image: linear-gradient(90deg, wheat, lightGreen);
+    background-size: 400%;
+    animation: transitionPendingTodoToCompletedTodo 0.5s 1 both;
 }
 
 .button-container {
@@ -30,9 +48,9 @@
 
 .button-container .complete-todo-button:hover {
     animation: buttonScaleUp 0.2s ease-in both;
-    background-color: lime;
+    background-color: palegreen;
 }
 .button-container .remove-todo-button:hover {
     animation: buttonScaleUp 0.2s ease-in both;
-    background-color: red;
+    background-color: tomato;
 }

@@ -21,7 +21,6 @@ function TodoList({
 
     const content = (
         <div className="list-wrapper">
-            <button onClick={onDisplayAlterClicked}>Dispatch thunk</button>
             {todos.map((todo) => (
                 <TodoListItem
                     key={todo.id}

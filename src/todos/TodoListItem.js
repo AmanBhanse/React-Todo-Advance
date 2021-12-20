@@ -9,7 +9,7 @@ function TodoListItem({ todo, onRemovedPressed, onMarkCompletedPressed }) {
                 <button
                     className="remove-todo-button"
                     onClick={() => {
-                        onRemovedPressed(todo.text);
+                        onRemovedPressed(todo.id);
                     }}
                 >
                     ✖

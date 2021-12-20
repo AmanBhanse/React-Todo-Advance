@@ -1,5 +1,13 @@
 import { initializeApp } from "firebase/app";
-import { collection, getDocs, getFirestore, addDoc, doc, deleteDoc } from "firebase/firestore";
+import {
+    collection,
+    getDocs,
+    getFirestore,
+    addDoc,
+    doc,
+    deleteDoc,
+    updateDoc,
+} from "firebase/firestore";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBybFzLo2YENGKK1vDk9YnXsqKmGht3Lg4",
@@ -55,4 +63,10 @@ export const deleteTodoFromDB = async (todoID) => {
     const docRef = doc(db, FIREBASE_TODO_COLLECTION_NAME, todoID);
     const todoDelete = await deleteDoc(docRef);
     return todoDelete;
+};
+
+export const markTodoAsCompleteInDB = async (todoID) => {
+    const docRef = doc(db, FIREBASE_TODO_COLLECTION_NAME, todoID);
+
+    await updateDoc(docRef, { isCompleted: true });
 };

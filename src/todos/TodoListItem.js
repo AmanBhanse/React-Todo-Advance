@@ -31,7 +31,7 @@ function TodoListItem({ todo, onRemovedPressed, onMarkCompletedPressed }) {
                 {!todo.isCompleted && (
                     <button
                         className="complete-todo-button"
-                        onClick={() => onMarkCompletedPressed(todo.text)}
+                        onClick={() => onMarkCompletedPressed(todo.id)}
                     >
                         ✔
                     </button>

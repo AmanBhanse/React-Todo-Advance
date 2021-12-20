@@ -5,7 +5,7 @@ import {
     createTodo,
     removeTodo,
 } from "./actions";
-import { getTodosFromDB, addTodoToDB, deleteTodoFromDB } from "./firebase";
+import { getTodosFromDB, addTodoToDB, deleteTodoFromDB, markTodoAsCompleteInDB } from "./firebase";
 
 //Thunk is function is function which returns functions which contains actual logic we want to perform when triggered
 
@@ -39,6 +39,14 @@ export const deleteTodoRequest = (todoID) => async (dispatch, getState) => {
     try {
         await deleteTodoFromDB(todoID);
         dispatch(removeTodo(todoID));
+    } catch (e) {
+        alert(e);
+    }
+};
+
+export const requestMarkTodoAsComplete = (todoID) => async (dispatch, getState) => {
+    try {
+        await markTodoAsCompleteInDB(todoID);
     } catch (e) {
         alert(e);
     }

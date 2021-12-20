@@ -12,8 +12,8 @@ export const removeTodo = (todoID) => {
 
 export const MARK_TODO_COMPLETE = "MARK_TODO_COMPLETE";
 
-export const markTodoComplete = (text) => {
-    return { type: MARK_TODO_COMPLETE, payload: { text } };
+export const markTodoComplete = (todoID) => {
+    return { type: MARK_TODO_COMPLETE, payload: { todoID } };
 };
 
 export const LOAD_TODOS_IN_PROGRESS = "LOAD_TODOS_IN_PROGRESS";

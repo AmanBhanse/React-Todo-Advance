@@ -4,6 +4,7 @@ import {
     loadTodosFailure,
     createTodo,
     removeTodo,
+    markTodoComplete,
 } from "./actions";
 import { getTodosFromDB, addTodoToDB, deleteTodoFromDB, markTodoAsCompleteInDB } from "./firebase";
 
@@ -47,6 +48,7 @@ export const deleteTodoRequest = (todoID) => async (dispatch, getState) => {
 export const requestMarkTodoAsComplete = (todoID) => async (dispatch, getState) => {
     try {
         await markTodoAsCompleteInDB(todoID);
+        dispatch(markTodoComplete(todoID));
     } catch (e) {
         alert(e);
     }

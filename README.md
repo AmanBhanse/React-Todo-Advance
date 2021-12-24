@@ -13,8 +13,12 @@ In order to run this project you will need to follow below steps
 -   You need to have firebase account.
 -   Once your account is ready, you need to create Firebase Project
 -   After you created the project, in your project dashboard go to Firestore Database.
--   In Firestore Database, create the collection `reduxTodoProjDB` (you can create with your own
-    custom name too, but you will need to change the variable value
+
+-   In dashboard, under `Build` section (left wall) click on `Firestore Database`, `create database`
+    dialogue box will appear,select `start in test mode` then click next , and then select location
+    and click `enable`.
+-   In Firestore Database, create the collection with ID `reduxTodoProjDB` (you can create with your
+    own custom name too, but you will need to change the variable value
     `const FIREBASE_TODO_COLLECTION_NAME = "YOUR_CUSTOM_NAME"` present at file
     `./todos/firebase.js`).
 -   Now go to `Project setting` from firebase dashboard, select `General` tab , under `General` tab

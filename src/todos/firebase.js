@@ -10,15 +10,10 @@ import {
 } from "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBybFzLo2YENGKK1vDk9YnXsqKmGht3Lg4",
-    authDomain: "todo-app-backend-aae15.firebaseapp.com",
-    projectId: "todo-app-backend-aae15",
-    storageBucket: "todo-app-backend-aae15.appspot.com",
-    messagingSenderId: "270417615359",
-    appId: "1:270417615359:web:d6f0cb4b4d327ac4ed2fca",
-    measurementId: "G-6KZRXQLGS2",
+    //TODO: paste you firebaseConfig here
 };
 
+//you can change the collection Name here
 const FIREBASE_TODO_COLLECTION_NAME = "reduxTodoProjDB";
 
 //initialize app

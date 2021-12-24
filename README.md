@@ -11,7 +11,7 @@
 In order to run this project you will need to follow below steps
 
 -   You need to have firebase account.
--   Once your account is ready, you need to create Firebase Project
+-   Once your account is ready, you need to create Firebase Project.
 -   After you created the project, in your project dashboard go to Firestore Database.
 
 -   In dashboard, under `Build` section (left wall) click on `Firestore Database`, `create database`

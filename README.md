@@ -22,7 +22,8 @@ In order to run this project you will need to follow below steps
     `const FIREBASE_TODO_COLLECTION_NAME = "YOUR_CUSTOM_NAME"` present at file
     `./todos/firebase.js`).
 -   Now go to `Project setting` from firebase dashboard, select `General` tab , under `General` tab
-    under `Your apps` section, you will see
+    under `Your apps` section, create web app, register app and click on `continue to console`.
+    Under `Your apps` section
 
     `const firebaseConfig = { apiKey: "******", authDomain: "******", projectId: "******", storageBucket: "******", messagingSenderId: "******", appId: "******", measurementId: "******" };`
 

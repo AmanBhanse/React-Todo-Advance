@@ -31,5 +31,5 @@ In order to run this project you will need to follow below steps
 
 ## Build and run the App
 
--   open terminal in your project , and just run `npm i`.
--   then run `npm start`
+-   open terminal in your project , and run command `npm i`.
+-   then run command `npm start`

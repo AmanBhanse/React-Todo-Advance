@@ -27,7 +27,7 @@ function NewTodoForm({ todos, onCreatePressed }) {
                     }
                 }}
             >
-                create todo
+                CREATE TODO
             </button>
         </div>
     );

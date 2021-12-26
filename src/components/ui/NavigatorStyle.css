@@ -1,0 +1,51 @@
+.nav-bar {
+    width: 100vw;
+    height: 15vh;
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+}
+
+.logo-container {
+    font-size: large;
+}
+
+.nav-link ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.nav-link ul a {
+    text-decoration: none;
+    color: gray;
+}
+
+.nav-link ul li {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-img-container img {
+    width: 45%;
+    height: 45%;
+}

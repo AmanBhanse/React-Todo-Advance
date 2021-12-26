@@ -1,0 +1,36 @@
+:root {
+    --form-element-height: 5vh;
+}
+
+.new-todo-form {
+    margin-top: 3.5rem;
+}
+
+.new-todo-input {
+    width: 50vw;
+    height: var(--form-element-height);
+    margin-right: 4.5px;
+}
+
+.new-todo-button {
+    height: 6vh;
+    width: 10vw;
+    font-weight: bold;
+    margin-left: 7px;
+    border-style: none;
+    border-radius: 3px;
+}
+
+.new-todo-button:hover {
+    animation: buttonScaleUpCreateButton 0.2s ease-in both;
+    background-color: palegreen;
+    border-radius: 5px;
+}
+
+@keyframes buttonScaleUpCreateButton {
+    0% {
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}

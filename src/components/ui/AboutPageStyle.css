@@ -1,0 +1,18 @@
+.about-page {
+    margin-top: 5vh;
+    display: grid;
+    grid-template-columns: 70vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-page-container {
+    text-align: left;
+}
+
+.about-page-link a {
+    position: relative;
+    top: -9px;
+    text-decoration: none;
+    padding-left: 5px;
+}
